@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
 
   // Important: base path must be '/' for Amplify
-  base: '/',
+  base: './',
 
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
