@@ -1,0 +1,23 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    # Vite outputs files to the "dist" folder
+    baseDirectory: dist
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+
+# Optional: custom redirects for React Router
+# Make sure to add these in the Amplify Console under Rewrites and Redirects
+# - Source address: /<*>
+# - Target address: /index.html
+# - Type: 200 (Rewrite)
